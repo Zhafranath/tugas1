@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <label for="angka">Masukan Angka</label>
+        <input type="text" id="angkaa" >
+        <button>Klik</button>
+        <div id="a"></div>
+
+    <script >
+        const btn = document.querySelector('button');
+btn.addEventListener('click',function (){
+    const i = document.getElementById("angkaa").value
+    const p = document.createElement("p");
+    const a = document.getElementById("a");
+    if(i == 0){
+        console.log(i);
+        p.innerHTML = "invalid input";
+    }
+    else if(i %5 == 0 && i %3 ==0){
+        console.log(i);
+        p.innerHTML = "FizzBuzz";
+
+    }
+    else if(i %5 == 0){
+        console.log(i);
+        p.innerHTML = "Fizz";
+        
+    }
+    else if(i %3 == 0){
+        console.log(i);
+        p.innerHTML = "Buzz";
+        
+    }
+    else{
+        console.log(i);
+        p.innerHTML = i;
+    }
+    a.append(p);
+});
+    </script>
+</body>
+</html>
