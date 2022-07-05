@@ -1,0 +1,144 @@
+.main {
+    margin: 20px;
+    text-align: center;
+
+    h3 {
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 8px 24px;
+        color: white;
+        opacity: 0.8;
+        border-radius: 4px;
+        background-color: #f778b8;
+        cursor: pointer;
+        box-shadow: 0 5px #e04893;
+
+      // Tambahkan code untuk ketika kursor berada diatas element dengan class .button 
+        &:hover{
+            opacity: 1;
+        }
+    
+      // Tambahkan code untuk ketika element dengan class .button diklik
+        &:active{
+        position: relative;
+        top: 7px;
+        box-shadow: none;
+        }
+    
+    }
+}
+//--------------------------------------------------
+// Tambahkan variable $ninja-color disini
+$ninja-color:#7579a3;
+
+.main {
+    margin: 20px;
+    border-radius: 5px;
+
+.title {
+    font-size: 32px;
+    margin-bottom: 5px;
+    // Gantikan nilai warna teks dengan variable $ninja-color 
+    color:$ninja-color;
+    
+}
+
+.description {
+    color: #5f6977;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.button {
+    // Gantikan nilai warna latar belakang dengan variable $ninja-color 
+    background-color:$ninja-color;
+    
+    display: inline-block;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+}
+//-----------------------------------------------------------------------
+// Tambahkan argument $color  
+@mixin circle($color) {
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 10px;
+    text-align: center;
+    // Gunakan argument $color untuk mengubah warna latar
+    background-color: $color;
+    }
+    
+.main {
+        margin: 20px 10px;
+        color: #ffffff;
+        
+    .small {
+        // Tambahkan nilai #20efae sebagai argument
+        @include circle(#20efae);
+        width: 34px;
+        height: 34px;
+    }
+        
+    .medium {
+        // Tambahkan nilai #61cbff sebagai argument
+        @include circle(#61cbff);
+        width: 62px;
+        height: 62px;
+    }
+        
+    .large {
+        // Tambahkan nilai #a070f7 sebagai argument
+        @include circle(#a070f7);
+        width: 90px;
+        height: 90px;
+    }
+}
+//--------------------------------------------------
+// Import file _variable.scss 
+@import "variables";
+
+.main {
+    margin: 20px;
+    text-align: center;
+    
+    .title {
+        color: #455b6d;
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        display: inline-block;
+        border-radius: 50%;
+        margin: 10px;
+        text-align: center;
+        height: 64px;
+        width: 64px;
+        color: #ffffff;
+        font-size: 32px;
+        box-shadow: 1px 2px 6px rgba(106, 137, 152, 0.3)
+    }
+    
+    .twitter {
+        // Gunakan variable $twitter untuk menetapkan warna latar
+        background-color:$twitter;
+        
+    }
+    
+    .facebook {
+        // Gunakan variable $facebook untuk menetapkan warna latar
+        background-color:$facebook;
+        
+    }
+    
+    .fa {
+        line-height: 64px;
+    }
+}
+
